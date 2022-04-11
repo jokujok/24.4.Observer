@@ -7,12 +7,12 @@ public final class Continent {
 
     private final List<Country> countries = new ArrayList<>();
 
-    public void addCountry() {
-        countries.add();
-        countries.add();
-        countries.add();
-        countries.add();
-        countries.add();
+    public void addCountry(Country country) {
+        countries.add(country);
+        countries.add(country);
+        countries.add(country);
+        countries.add(country);
+        countries.add(country);
     }
 
 }

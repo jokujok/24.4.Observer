@@ -8,12 +8,12 @@ public final class World {
 
     private final List<Continent> continents = new ArrayList<>();
 
-    public void addContinent() {
-        continents.add();
-        continents.add();
-        continents.add();
-        continents.add();
-        continents.add();
+    public void addContinent(Continent continent) {
+        continents.add(continent);
+        continents.add(continent);
+        continents.add(continent);
+        continents.add(continent);
+        continents.add(continent);
     }
     public BigDecimal getPeopleQuantity() {
         BigDecimal peopleQuantity = new BigDecimal("8000000000");
