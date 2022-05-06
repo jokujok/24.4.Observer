@@ -14,7 +14,7 @@ public class StreamMain {
 
         Map<String,ForumUser> theResultMapOfUsers = theForum.getUserList().stream()
                 .filter(forumUser -> forumUser.getSex() == 'M')
-                .filter(forumUser -> forumUser.getBirthDate() )
+                .filter(forumUser -> forumUser.getBirthDate() > 2000)
                 .filter(forumUser -> forumUser.getAmountOfPosts() >= 0);
 
         theResultMapOfUsers.entrySet().stream()
