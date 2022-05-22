@@ -7,7 +7,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
-public class CalculatorTestSuite {
+class CalculatorTestSuite {
 
     @Autowired
     private Calculator calculator;
@@ -16,7 +16,7 @@ public class CalculatorTestSuite {
     public void testAddition() {
         //Given
         //When
-        calculator.addition();
+        calculator.add(2.0,2.0);
         //Then
         assertEquals(4,4);
     }
@@ -25,7 +25,7 @@ public class CalculatorTestSuite {
     public void testSubtraction() {
         //Given
         //When
-        calculator.subtraction();
+        calculator.sub(2.0,2.0);
         //Then
         assertEquals(0, 0);
     }
@@ -34,7 +34,7 @@ public class CalculatorTestSuite {
     public void testMultiplication() {
         //Given
         //When
-        calculator.multiplication();
+        calculator.mul(2.0,2.0);
         //Then
         assertEquals(4, 4);
     }
@@ -43,7 +43,7 @@ public class CalculatorTestSuite {
     public void testDivision() {
         //Given
         //When
-        calculator.division();
+        calculator.div(2.0,2.0);
         //Then
         assertEquals(1, 1);
     }

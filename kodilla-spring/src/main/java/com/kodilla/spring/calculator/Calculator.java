@@ -1,25 +1,25 @@
 package com.kodilla.spring.calculator;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Repository;
 
-@Service
+@Repository
 public final class Calculator {
 
-    @Autowired
     private Display display;
 
-    public void addition() {
-        display.add(2,2);
-    }
-    public void subtraction() {
-        display.sub(2,2);
-    }
-    public void multiplication() {
-        display.mul(2,2);
-    }
-    public void division() {
-        display.div(2,2);
+    public double add(double a, double b) {
+        return a+b;
     }
 
+    public double sub(double a, double b) {
+        return a-b;
+    }
+
+    public double mul(double a, double b) {
+        return a*b;
+    }
+
+    public double div(double a, double b) {
+        return a/b;
+    }
 }
