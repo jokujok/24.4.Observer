@@ -31,10 +31,11 @@ public final class Library extends Prototype<Library> {
 
     @Override
     public String toString() {
-        return "Library{" +
-                "name='" + name + '\'' +
-                ", books=" + books +
-                '}';
+        String s = "Library [" + name + "]\n";
+        for (Book list : books) {
+            s = s + list.toString() + "\n";
+        }
+        return s;
     }
 
     public Library shallowCopy() throws CloneNotSupportedException {
@@ -46,6 +47,7 @@ public final class Library extends Prototype<Library> {
         clonedLibrary.books = new HashSet<>();
         for (Book theBook : books) {
             Book clonedList = new Book(theBook.getName());
+
             clonedLibrary.getBooks().add(clonedList);
         }
         return clonedLibrary;
@@ -56,11 +58,11 @@ public final class Library extends Prototype<Library> {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Library library = (Library) o;
-        return getName().equals(library.getName()) && getBooks().equals(library.getBooks());
+        return Objects.equals(name, library.name) && Objects.equals(books, library.books);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getName(), getBooks());
+        return Objects.hash(name, books);
     }
 }
