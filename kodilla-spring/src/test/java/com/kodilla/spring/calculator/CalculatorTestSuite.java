@@ -12,7 +12,7 @@ class CalculatorTestSuite {
     @Autowired
     private Calculator calculator;
 
-    @Test
+ /*   @Test
     public void testAddition() {
         //Given
         //When
@@ -46,5 +46,5 @@ class CalculatorTestSuite {
         calculator.div(2.0,2.0);
         //Then
         assertEquals(1, 1);
-    }
+    } */
 }

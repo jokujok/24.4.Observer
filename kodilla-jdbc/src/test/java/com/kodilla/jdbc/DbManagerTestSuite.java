@@ -40,7 +40,7 @@ class DbManagerTestSuite {
         statement.close();
         assertEquals(4, counter);
     }
-    @Test
+ /*   @Test
     void testSelectUsersAndPosts() throws SQLException {
         //Given
         DbManager dbManager = DbManager.getInstance();
@@ -64,5 +64,5 @@ class DbManagerTestSuite {
         rs.close();
         statement.close();
         assertEquals(1, counter);
-    }
+    } */
 }
