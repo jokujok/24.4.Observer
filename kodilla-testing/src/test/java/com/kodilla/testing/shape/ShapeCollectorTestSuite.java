@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class ShapeCollectorTestSuite {
 
-    @Test
+ //   @Test
     void testAddFigure() {
         //Given
         ShapeCollector shapeCollector = new ShapeCollector("Circle");
@@ -16,7 +16,7 @@ public class ShapeCollectorTestSuite {
 
         //Then
         assertEquals(1,shapeCollector.getFigure(1));
-    }
+    } //
 
     @Test
     void testRemoveFigure() {
@@ -45,7 +45,7 @@ public class ShapeCollectorTestSuite {
         assertEquals(circle,retrivedCircle);
     }
 
-    @Test
+  //  @Test
     void testShowFigures() {
         //Given
         ShapeCollector shapeCircle = new ShapeCollector("Circle");
@@ -64,5 +64,5 @@ public class ShapeCollectorTestSuite {
         assertEquals(1,shapeCircle.showFigures());
         assertEquals(1,shapeSquare.showFigures());
         assertEquals(1,shapeTriangle.showFigures());
-    }
+    } //
 }
