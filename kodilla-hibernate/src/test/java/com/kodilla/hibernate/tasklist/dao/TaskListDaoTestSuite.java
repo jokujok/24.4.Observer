@@ -1,12 +1,12 @@
 package com.kodilla.hibernate.tasklist.dao;
 
 import com.kodilla.hibernate.tasklist.TaskList;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.List;
-import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -16,6 +16,12 @@ public class TaskListDaoTestSuite {
     @Autowired
     private TaskListDao taskListDao;
     private static final String DESCRIPTION = "Test: I am learning Hibernate";
+
+    @AfterEach
+    void cleanUp() {
+        taskListDao.deleteAll();
+
+    }
 
     @Test
     void testFindByListName() {
@@ -30,8 +36,5 @@ public class TaskListDaoTestSuite {
         //Then
         assertEquals(1, findTaskList.size());
 
-
-        //CleanUp
-        taskListDao.deleteById(taskList.getId());
     }
 }
