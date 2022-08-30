@@ -15,35 +15,51 @@ public class CalculatorTestSuite {
     public void testCalculationsAdd() {
         //Given
         //When
-        calculator.add(1,2);
+        double actual = calculator.add(1,2);
+        double actual2 = calculator.add(-2,0);
+        double actual3 = calculator.add(0,5);
         //Then
-        Assertions.assertEquals(3.0,3.0);
+        Assertions.assertEquals(3, actual);
+        Assertions.assertEquals(-2,actual2);
+        Assertions.assertEquals(5,actual3);
     }
 
     @Test
     public void testCalculationsSub() {
         //Given
         //When
-        calculator.sub(1,2);
+        double actual = calculator.sub(1,2);
+        double actual2 = calculator.sub(-2,0);
+        double actual3 = calculator.sub(0,6);
         //Then
-        Assertions.assertEquals(-1.0,-1.0);
+        Assertions.assertEquals(-1.0,actual);
+        Assertions.assertEquals(-2,actual2);
+        Assertions.assertEquals(-6.0,actual3);
     }
 
     @Test
     public void testCalculationsMul() {
         //Given
         //When
-        calculator.mul(1,2);
+        double actual = calculator.mul(1,2);
+        double actual2 = calculator.mul(-2,4);
+        double actual3 = calculator.mul(0,3);
         //Then
-        Assertions.assertEquals(2.0,2.0);
+        Assertions.assertEquals(2.0,actual);
+        Assertions.assertEquals(-8,actual2);
+        Assertions.assertEquals(0,actual3);
     }
 
     @Test
     public void testCalculationsDiv() {
         //Given
         //When
-        calculator.div(1,2);
+        double actual = calculator.div(1,2);
+        double actual2 = calculator.div(-3,-2);
+        double actual3 = calculator.div(-5,2);
         //Then
-        Assertions.assertEquals(0.5,0.5);
+        Assertions.assertEquals(0.5,actual);
+        Assertions.assertEquals(1.5,actual2);
+        Assertions.assertEquals(-2.5,actual3);
     }
 }
